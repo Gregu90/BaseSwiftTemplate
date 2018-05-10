@@ -6,8 +6,18 @@
 //  Copyright © 2018 Admin. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class TableViewServiceSectionBuilder: NSObject {
-
+struct TableViewServiceSectionBuilder
+{
+    static func sectionWithItem(_ item: Any) -> TableViewServiceSection
+    {
+        switch item {
+        case is TableViewServiceSection:
+            return item as! TableViewServiceSection
+        default:
+            assertionFailure("SectionBuilder: \(item) unhandled")
+            return TableViewServiceSection()
+        }
+    }
 }

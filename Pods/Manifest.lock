@@ -1,0 +1,40 @@
+PODS:
+  - Alamofire (4.7.2)
+  - Kingfisher (4.7.0)
+  - ObjectMapper (3.1.0)
+
+DEPENDENCIES:
+  - Alamofire (from `https://github.com/Alamofire/Alamofire.git`, branch `master`)
+  - Kingfisher (from `https://github.com/onevcat/Kingfisher.git`, branch `master`)
+  - ObjectMapper (from `https://github.com/Hearst-DD/ObjectMapper.git`, branch `master`)
+
+EXTERNAL SOURCES:
+  Alamofire:
+    :branch: master
+    :git: https://github.com/Alamofire/Alamofire.git
+  Kingfisher:
+    :branch: master
+    :git: https://github.com/onevcat/Kingfisher.git
+  ObjectMapper:
+    :branch: master
+    :git: https://github.com/Hearst-DD/ObjectMapper.git
+
+CHECKOUT OPTIONS:
+  Alamofire:
+    :commit: 2fb881a1702cb1976c36192aceb54dcedab6fdc2
+    :git: https://github.com/Alamofire/Alamofire.git
+  Kingfisher:
+    :commit: 2386862cf72a8dd101e87eb9f2e9f11ec7e928fd
+    :git: https://github.com/onevcat/Kingfisher.git
+  ObjectMapper:
+    :commit: 883a6f1d53e59b2b8bccf0fa49fa07d8b0a6b6e2
+    :git: https://github.com/Hearst-DD/ObjectMapper.git
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
+  ObjectMapper: 9a4b0d34a264821f26a0f431d79fd48a1f69862c
+
+PODFILE CHECKSUM: 85c63e1e1df4b1bcc9110aee0c13fe0a75db9ea8
+
+COCOAPODS: 1.5.2

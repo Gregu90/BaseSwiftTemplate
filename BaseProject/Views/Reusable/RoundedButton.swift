@@ -8,6 +8,23 @@
 
 import UIKit
 
-class RoundedButton: NSObject {
-
+class RoundedButton: UIButton {
+    
+    var cornerRadius: CGFloat = 4.0
+    
+    override func layoutSubviews()
+    {
+        super.layoutSubviews()
+        self.layer.masksToBounds = true
+        self.layer.cornerRadius = self.cornerRadius
+    }
+    
+    ///Ensure that your button is UIButtonType.Custom in order to have "nice" pressed state
+    func setBackgroundColor(_ color: UIColor, forState state: UIControlState = UIControlState())
+    {
+        let coloredImage = UIImage(color: color)
+        self.setBackgroundImage(coloredImage, for: state)
+    }
+    
 }
+

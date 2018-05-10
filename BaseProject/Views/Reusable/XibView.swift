@@ -8,6 +8,38 @@
 
 import UIKit
 
-class XibView: NSObject {
-
+class XibView: UIView {
+    
+    @IBOutlet weak var contentView: UIView!
+    
+    required init?(coder aDecoder: NSCoder)
+    {
+        super.init(coder: aDecoder)
+        self.loadNib()
+        self.contentView.frame = self.bounds
+        self.addSubview(self.contentView)
+        self.setup()
+    }
+    
+    override init(frame: CGRect)
+    {
+        super.init(frame: frame)
+        self.loadNib()
+        self.contentView.frame = self.bounds
+        self.addSubview(self.contentView)
+        self.setup()
+    }
+    
+    fileprivate func loadNib()
+    {
+        let classHierarhy = NSStringFromClass(type(of: self)).split { $0 == "."}.map { String($0) }
+        let className = classHierarhy.last
+        Bundle.main.loadNibNamed(className!, owner: self, options: nil)
+    }
+    
+    internal func setup()
+    {
+        
+    }
+    
 }
