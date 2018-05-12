@@ -17,6 +17,7 @@ private enum Colors
     case red, yellow, green
     case gray, mediumGray, lightGray
     case beige
+    case gradientDark, gradientWhite
     
     var color: UIColor
     {
@@ -32,6 +33,8 @@ private enum Colors
         case .almostWhite: return UIColor(rgb: (245, 245, 246))
         case .black: return UIColor(rgb: (0, 0, 0))
         case .beige: return UIColor(rgb: (249, 245, 237))
+        case .gradientDark: return UIColor(rgb: (139, 148, 157))
+        case .gradientWhite: return UIColor(rgb: (204, 204, 203))
         }
     }
 }
@@ -41,6 +44,7 @@ enum AppColor
     case lightText, darkText, mediumText
     case primary, secondary, tertiary
     case defaultBackground
+    case gradientDark, gradientWhite
     
     var color: UIColor
     {
@@ -52,6 +56,8 @@ enum AppColor
         case .primary: return Colors.red.color
         case .secondary: return Colors.green.color
         case .tertiary: return Colors.yellow.color
+        case .gradientDark: return Colors.gradientDark.color
+        case .gradientWhite: return Colors.gradientWhite.color
         }
     }
 }
@@ -59,7 +65,9 @@ enum AppColor
 enum AppImage
 {
     case status(online: Bool)
-
+    case library
+    case wishlist
+    case chat
     
     fileprivate var name: String
     {
@@ -68,9 +76,11 @@ enum AppImage
             if online {
                 return "online"
             } else {
-                "offline"
+                return "offline"
             }
-        
+        case .library: return "library_off"
+        case .wishlist: return "wishlist_off"
+        case .chat: return "chat_on"
         }
     }
     

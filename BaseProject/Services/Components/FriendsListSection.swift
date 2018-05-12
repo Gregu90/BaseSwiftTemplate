@@ -16,31 +16,36 @@ class FriendsListSection: TableViewServiceSection
     {
         self.friends = friends
         super.init()
+        self.items = self.items()
     }
     
     fileprivate func items() -> [TableViewServiceSectionItem]
     {
         var items = [TableViewServiceSectionItem]()
-        
-        if self.restaurants.count > 0 {
-            items = self.friends.map({ (r) -> TableViewServiceSectionItem in
-                RestaurantItem(restaurant: r) })
-        } else {
-            if isActiveSearch {
-                items.append(NoContentsItem(text: "restaurantList.searchedRestaurant.emptyList.message".localized))
-            }else{
-                items.append(NoContentsItem(text: "restaurantList.emptyList.message".localized))
-            }
+
+        if self.friends.count > 0 {
+            items = self.friends.map({FriendItem(friend: $0) })
         }
         return items
     }
     
     override func defaultRouterForRow(_ row: Int) -> Routable?
     {
-        if let restaurant = self.restaurants[safe: row] {
-            return RestaurantRouter(action: RestaurantAction.details(restaurant: restaurant, address: self.address, historyOrder: nil, modally: false))
-        }
+//        if let restaurant = self.restaurants[safe: row] {
+//            return RestaurantRouter(action: RestaurantAction.details(restaurant: restaurant, address: self.address, historyOrder: nil, modally: false))
+//        }
         return nil
+    }
+    
+    func loadItems()
+    {
+        self.items = self.items()
+    }
+    
+    func reloadItems()
+    {
+        self.items = self.items()
+        self.delegate?.reloadSection(self)
     }
     
 }
@@ -53,14 +58,14 @@ class FriendItem: TableViewServiceSectionItem
     {
         self.friend = friend
         super.init()
-        self.nibName = "RestaurantTableViewCell"
-        self.reuseIdentifier = "RestaurantTableViewCell"
+        self.nibName = "FriendTableViewCell"
+        self.reuseIdentifier = "FriendTableViewCell"
     }
     
     override func setupCell(_ cell: UITableViewCell)
     {
-        if let cell = cell as? RestaurantTableViewCell {
-            cell.setup(self.restaurant)
+        if let cell = cell as? FriendTableViewCell {
+            cell.setup(self.friend)
         }
     }
 }

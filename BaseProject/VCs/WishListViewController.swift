@@ -10,9 +10,10 @@ import UIKit
 
 class WishListViewController: UIViewController {
 
+    @IBOutlet weak var background: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.setupBackground()
         // Do any additional setup after loading the view.
     }
 
@@ -20,7 +21,19 @@ class WishListViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    fileprivate func setupBackground() {
+        var gradientLayer = CAGradientLayer()
+        
+        gradientLayer.frame = self.view.bounds
+        
+        gradientLayer.colors = [AppColor.gradientWhite.color.cgColor, AppColor.gradientDark.color.cgColor]
+        
+        gradientLayer.startPoint = CGPoint.init(x: 1.0, y: 1.0)
+        gradientLayer.endPoint =  CGPoint.init(x: 0.0, y: 0.0)
+        
+        self.background.layer.addSublayer(gradientLayer)
+        //self.view.layer.addSublayer(gradientLayer)
+    }
 
     /*
     // MARK: - Navigation
