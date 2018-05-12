@@ -62,6 +62,32 @@ class LoginViewController: UIViewController, LoginViewControllerDelegate {
         self.userService.getFriends {
             (success, error) in
             if success {
+                self.getLibraryAndMoveOn()
+            } else {
+                self.showErrorAlert("friends error")
+            }
+        }
+    }
+    
+    func getLibraryAndMoveOn() {
+        self.userService.getLibrary {
+            (success, error) in
+            if success {
+                
+                
+                self.getAllLibraryAndMoveOn()
+            } else {
+                self.showErrorAlert("friends error")
+            }
+        }
+    }
+    
+    func getAllLibraryAndMoveOn() {
+        self.userService.getAllGames {
+            (success, error) in
+            if success {
+                
+                
                 let action = Action.tabbarview()
                 let router = Router(action: action)
                 self.presentRoutable(router)
@@ -70,5 +96,4 @@ class LoginViewController: UIViewController, LoginViewControllerDelegate {
             }
         }
     }
-    
 }

@@ -15,6 +15,8 @@ class UserService
     fileprivate let apiClient: APIClient
     fileprivate var userAuthData: UserToken?
     var friends: [Friend] = []
+    var products: [Product] = []
+    var games: [Game] = []
     
     init(apiClient: APIClient)
     {
@@ -75,6 +77,35 @@ class UserService
         
     }
 
+    func getLibrary(completion: @escaping UserOperationCompletion) {
+        if let user = userAuthData {
+            self.apiClient.getLibrary(userId: user.id) {
+                [weak self](friends, error) in
+                guard let sself = self else { return }
+                if let error = error {
+                    completion(false, error)
+                } else {
+                    sself.products = friends
+                    completion(true, nil)
+                }
+            }
+        } else {
+            completion(false, nil)
+        }
+    }
     
-    
+    func getAllGames(completion: @escaping UserOperationCompletion) {
+        if let user = userAuthData {
+            self.apiClient.getAllGames(products: self.products) {
+                [weak self](games, error) in
+                guard let sself = self else { return }
+                if let error = error {
+                    completion(false, error)
+                } else {
+                    sself.games = games
+                    completion(true, nil)
+                }
+            }
+        }
+    }
 }

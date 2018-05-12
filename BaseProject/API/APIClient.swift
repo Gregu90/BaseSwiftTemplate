@@ -34,6 +34,7 @@ class APIClient : RESTClient
     }
     
     var friends: [Friend] = []
+    var games: [Game] = []
     
     //MARK: - Requests
     
@@ -120,6 +121,75 @@ class APIClient : RESTClient
         }
         
     }
+    
+    func getLibrary(userId: String, completion: @escaping ((_ products: [Product], _ error: Error?) -> ()))
+    {
+        self.setup("http://api.gog.com/")
+        
+        self.makeRequest(method: .get, path: APIConstants.Paths.library(userId: userId).string) {
+            (request, response, statusCode, error) in
+            var friends: [Product] = []
+            if let error = error {
+                completion(friends, error)
+            } else {
+                if let mapped = Mapper<Library>().map(JSONObject: response) {
+                    DLog("mapped library: \(mapped)")
+                    
+                    completion(mapped.items, nil)
+                } else {
+                    completion(friends, error)
+                }
+            }
+        }
+        
+    }
+    
+    func getGame(product: Product, completion: @escaping ((_ game: Game?, _ error: Error?) -> ()))
+    {
+        self.setup("http://api.gog.com/")
+        let param: [String: String] = ["locale": "en-US"]
+        self.makeRequest(method: .get, path: APIConstants.Paths.game(gameId: product.productId).string) {
+            (request, response, statusCode, error) in
+            var friends: [Product] = []
+            if let error = error {
+                completion(nil, error)
+            } else {
+                DLog("response \(response)")
+
+                if let mapped = Mapper<Game>().map(JSONObject: response) {
+                    DLog("mapped library: \(mapped)")
+                    
+                    completion(mapped, nil)
+                } else {
+                    completion(nil, error)
+                }
+            }
+        }
+    }
+    
+    func getAllGames(products: [Product], completion: @escaping ((_ games: [Game], _ error: Error?) -> ())) {
+        let myGroup = DispatchGroup()
+        var games: [Game] = []
+        for i in 0 ..< products.count {
+            myGroup.enter()
+            
+            self.getGame(product: products[i]) {
+                (game, error) in
+                if let game = game {
+                    games.append(game)
+                }
+                myGroup.leave()
+            }
+            
+        }
+        
+        myGroup.notify(queue: .main) {
+            print("Finished all requests.")
+            self.games = games
+            completion(games, nil)
+        }
+    }
+    
     
 //    func doRequest(completion: ((_ success: Bool, _ error: Error?)->())?)
 //    {

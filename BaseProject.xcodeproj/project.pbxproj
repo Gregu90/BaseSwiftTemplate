@@ -37,6 +37,11 @@
 		8485DE5520A7117B0022C37A /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8485DE4B20A711780022C37A /* Lato-Bold.ttf */; };
 		8485DE5620A7117B0022C37A /* Lato-HairlineItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8485DE4C20A711790022C37A /* Lato-HairlineItalic.ttf */; };
 		8485DE5720A7117B0022C37A /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8485DE4D20A7117A0022C37A /* Lato-BoldItalic.ttf */; };
+		8485DE5920A73F7E0022C37A /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485DE5820A73F7E0022C37A /* Library.swift */; };
+		8485DE5B20A7430F0022C37A /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485DE5A20A7430F0022C37A /* Game.swift */; };
+		8485DE5E20A74E640022C37A /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485DE5C20A74E640022C37A /* GameTableViewCell.swift */; };
+		8485DE5F20A74E640022C37A /* GameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8485DE5D20A74E640022C37A /* GameTableViewCell.xib */; };
+		8485DE6120A755BC0022C37A /* ChatWithViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485DE6020A755BC0022C37A /* ChatWithViewController.swift */; };
 		8486521B20A3AF2700645FD7 /* RESTClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8486521A20A3AF2700645FD7 /* RESTClient.swift */; };
 		8486521D20A3B68100645FD7 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8486521C20A3B68100645FD7 /* APIClient.swift */; };
 		8486521F20A3B7F400645FD7 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8486521E20A3B7F400645FD7 /* APIConstants.swift */; };
@@ -109,6 +114,11 @@
 		8485DE4B20A711780022C37A /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 		8485DE4C20A711790022C37A /* Lato-HairlineItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-HairlineItalic.ttf"; sourceTree = "<group>"; };
 		8485DE4D20A7117A0022C37A /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
+		8485DE5820A73F7E0022C37A /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
+		8485DE5A20A7430F0022C37A /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		8485DE5C20A74E640022C37A /* GameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
+		8485DE5D20A74E640022C37A /* GameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameTableViewCell.xib; sourceTree = "<group>"; };
+		8485DE6020A755BC0022C37A /* ChatWithViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatWithViewController.swift; sourceTree = "<group>"; };
 		8486521A20A3AF2700645FD7 /* RESTClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTClient.swift; sourceTree = "<group>"; };
 		8486521C20A3B68100645FD7 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		8486521E20A3B7F400645FD7 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
@@ -231,6 +241,8 @@
 			children = (
 				8486522A20A3BBC700645FD7 /* User.swift */,
 				846B45C920A6F5D600E14F3D /* Friend.swift */,
+				8485DE5820A73F7E0022C37A /* Library.swift */,
+				8485DE5A20A7430F0022C37A /* Game.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -278,6 +290,7 @@
 				846B45C120A6E9AF00E14F3D /* LibraryViewController.swift */,
 				846B45C320A6E9C400E14F3D /* WishListViewController.swift */,
 				846B45C520A6E9CF00E14F3D /* ChatViewController.swift */,
+				8485DE6020A755BC0022C37A /* ChatWithViewController.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -289,6 +302,8 @@
 				845EE05620A4BA8400D12F0B /* AlertView */,
 				846B45CD20A70E4400E14F3D /* FriendTableViewCell.swift */,
 				846B45CE20A70E4400E14F3D /* FriendTableViewCell.xib */,
+				8485DE5C20A74E640022C37A /* GameTableViewCell.swift */,
+				8485DE5D20A74E640022C37A /* GameTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -499,6 +514,7 @@
 				845EE06520A4C98800D12F0B /* Localizable.strings in Resources */,
 				8485DE5620A7117B0022C37A /* Lato-HairlineItalic.ttf in Resources */,
 				8485DE5720A7117B0022C37A /* Lato-BoldItalic.ttf in Resources */,
+				8485DE5F20A74E640022C37A /* GameTableViewCell.xib in Resources */,
 				846B45D020A70E4400E14F3D /* FriendTableViewCell.xib in Resources */,
 				8485DE5220A7117B0022C37A /* Lato-Hairline.ttf in Resources */,
 				84DED09420A3A88100F80B2A /* LaunchScreen.storyboard in Resources */,
@@ -591,14 +607,18 @@
 				846B45C220A6E9AF00E14F3D /* LibraryViewController.swift in Sources */,
 				8486522120A3B90400645FD7 /* ViewConstants.swift in Sources */,
 				8486522320A3BA5600645FD7 /* UIExtensions.swift in Sources */,
+				8485DE5E20A74E640022C37A /* GameTableViewCell.swift in Sources */,
 				84DED08C20A3A88000F80B2A /* ViewController.swift in Sources */,
 				846B45C020A6E96C00E14F3D /* TabBarViewController.swift in Sources */,
 				8486523420A3BF0C00645FD7 /* TableViewServiceSectionBuilder.swift in Sources */,
 				8486521F20A3B7F400645FD7 /* APIConstants.swift in Sources */,
 				846B45CF20A70E4400E14F3D /* FriendTableViewCell.swift in Sources */,
+				8485DE5B20A7430F0022C37A /* Game.swift in Sources */,
 				846B45CC20A70D7400E14F3D /* FriendsListSection.swift in Sources */,
+				8485DE5920A73F7E0022C37A /* Library.swift in Sources */,
 				8486521B20A3AF2700645FD7 /* RESTClient.swift in Sources */,
 				84DED08A20A3A88000F80B2A /* AppDelegate.swift in Sources */,
+				8485DE6120A755BC0022C37A /* ChatWithViewController.swift in Sources */,
 				845EE06D20A4E07300D12F0B /* LoginWebViewController.swift in Sources */,
 				845EE05520A4B57300D12F0B /* Router.swift in Sources */,
 				845EE05820A4BA9A00D12F0B /* AlertView.swift in Sources */,

@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,28 +18,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="fnU-uB-WT8">
-                                <rect key="frame" x="46" y="317" width="283" height="33"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBb-aa-Qad" customClass="RoundedButton" customModule="BaseProject" customModuleProvider="target">
-                                        <rect key="frame" x="118.5" y="0.0" width="46" height="33"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="17"/>
-                                        <state key="normal" title="Login">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AWx-NQ-96m"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBb-aa-Qad" customClass="RoundedButton" customModule="BaseProject" customModuleProvider="target">
+                                <rect key="frame" x="50" y="196.5" width="275" height="275"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cBb-aa-Qad" secondAttribute="height" multiplier="1:1" id="YRr-HU-X1H"/>
+                                </constraints>
+                                <state key="normal" image="yourAppIcon">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AWx-NQ-96m"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.39215686274509803" green="0.21176470588235294" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fnU-uB-WT8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5AQ-6E-Myz"/>
-                            <constraint firstItem="fnU-uB-WT8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5VP-ib-sPs"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fnU-uB-WT8" secondAttribute="trailing" constant="46" id="Si9-Na-9Is"/>
-                            <constraint firstItem="fnU-uB-WT8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="h03-cc-tVI"/>
+                            <constraint firstItem="cBb-aa-Qad" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3lg-oy-2Vf"/>
+                            <constraint firstItem="cBb-aa-Qad" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hls-PX-Ic9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cBb-aa-Qad" secondAttribute="trailing" constant="50" id="j9f-y7-KS1"/>
+                            <constraint firstItem="cBb-aa-Qad" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="zGM-7f-nXX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -171,19 +169,28 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hBy-mW-urE">
+                                <rect key="frame" x="0.0" y="28" width="375" height="590"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Fkt-U9-qUu" firstAttribute="trailing" secondItem="hBy-mW-urE" secondAttribute="trailing" id="2eE-JH-OcS"/>
+                            <constraint firstItem="hBy-mW-urE" firstAttribute="leading" secondItem="Fkt-U9-qUu" secondAttribute="leading" id="RRI-t9-HDl"/>
                             <constraint firstItem="Fkt-U9-qUu" firstAttribute="trailing" secondItem="cVQ-dl-aww" secondAttribute="trailing" id="T8t-od-xo8"/>
                             <constraint firstItem="cVQ-dl-aww" firstAttribute="top" secondItem="Fkt-U9-qUu" secondAttribute="top" id="YN9-f1-XYP"/>
                             <constraint firstItem="Fkt-U9-qUu" firstAttribute="bottom" secondItem="cVQ-dl-aww" secondAttribute="bottom" id="c06-S9-XXx"/>
                             <constraint firstItem="cVQ-dl-aww" firstAttribute="leading" secondItem="Fkt-U9-qUu" secondAttribute="leading" id="hVC-iu-Ucz"/>
+                            <constraint firstItem="Fkt-U9-qUu" firstAttribute="bottom" secondItem="hBy-mW-urE" secondAttribute="bottom" id="uHa-d5-eaR"/>
+                            <constraint firstItem="hBy-mW-urE" firstAttribute="top" secondItem="Fkt-U9-qUu" secondAttribute="top" constant="8" id="vhj-iw-t4G"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fkt-U9-qUu"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Biblioteka" image="library_off" id="A2c-6c-MtI"/>
                     <connections>
                         <outlet property="background" destination="cVQ-dl-aww" id="wWm-tO-OwL"/>
+                        <outlet property="tableView" destination="hBy-mW-urE" id="ZYS-ae-PFr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vVV-3a-Rex" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -217,5 +224,6 @@
         <image name="chat_on" width="24" height="24"/>
         <image name="library_off" width="30" height="17"/>
         <image name="wishlist_off" width="24" height="22"/>
+        <image name="yourAppIcon" width="1024" height="1024"/>
     </resources>
 </document>

@@ -28,6 +28,8 @@ struct APIConstants
     {
         case token
         case friends(userId: String)
+        case library(userId: String)
+        case game(gameId: Int)
         
         var string: String
         {
@@ -36,7 +38,10 @@ struct APIConstants
                 "token"
             case .friends(let userId): return
                 "users/\(userId)/friends"
-            
+            case .library(let userId): return
+                "v1/users/\(userId)/ownedProductIds"
+            case .game(let gameId): return
+                "/v1/games/\(gameId)"
             }
         }
     }

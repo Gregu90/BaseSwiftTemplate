@@ -22,6 +22,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         UINavigationBar.appearance().barTintColor = UIColor.black
         UINavigationBar.appearance().isTranslucent = false
         // Do any additional setup after loading the view.
+         self.title = "Biblioteka"
     }
 
     override func didReceiveMemoryWarning() {
