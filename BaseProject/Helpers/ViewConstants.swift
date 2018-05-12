@@ -58,13 +58,18 @@ enum AppColor
 
 enum AppImage
 {
-    case logoWide
+    case status(online: Bool)
 
     
     fileprivate var name: String
     {
         switch self {
-        case .logoWide: return "icon_logo_wide"
+        case .status(let online):
+            if online {
+                return "online"
+            } else {
+                "offline"
+            }
         
         }
     }

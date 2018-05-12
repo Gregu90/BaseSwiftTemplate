@@ -1,11 +1,13 @@
 PODS:
   - Alamofire (4.7.2)
   - Kingfisher (4.7.0)
+  - Locksmith (4.0.0)
   - ObjectMapper (3.1.0)
 
 DEPENDENCIES:
   - Alamofire (from `https://github.com/Alamofire/Alamofire.git`, branch `master`)
   - Kingfisher (from `https://github.com/onevcat/Kingfisher.git`, branch `master`)
+  - Locksmith (from `https://github.com/matthewpalmer/Locksmith.git`, branch `master`)
   - ObjectMapper (from `https://github.com/Hearst-DD/ObjectMapper.git`, branch `master`)
 
 EXTERNAL SOURCES:
@@ -15,6 +17,9 @@ EXTERNAL SOURCES:
   Kingfisher:
     :branch: master
     :git: https://github.com/onevcat/Kingfisher.git
+  Locksmith:
+    :branch: master
+    :git: https://github.com/matthewpalmer/Locksmith.git
   ObjectMapper:
     :branch: master
     :git: https://github.com/Hearst-DD/ObjectMapper.git
@@ -26,6 +31,9 @@ CHECKOUT OPTIONS:
   Kingfisher:
     :commit: 2386862cf72a8dd101e87eb9f2e9f11ec7e928fd
     :git: https://github.com/onevcat/Kingfisher.git
+  Locksmith:
+    :commit: 49b08bf8fa16ff8d7ce41609a2adbc6b5237f65f
+    :git: https://github.com/matthewpalmer/Locksmith.git
   ObjectMapper:
     :commit: 883a6f1d53e59b2b8bccf0fa49fa07d8b0a6b6e2
     :git: https://github.com/Hearst-DD/ObjectMapper.git
@@ -33,8 +41,9 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
+  Locksmith: 380da64f08d5b2342509eeab908583f3c2e2db7d
   ObjectMapper: 9a4b0d34a264821f26a0f431d79fd48a1f69862c
 
-PODFILE CHECKSUM: 85c63e1e1df4b1bcc9110aee0c13fe0a75db9ea8
+PODFILE CHECKSUM: 1b6a6553fb13ae2945ea9373ef16633380bcc88a
 
 COCOAPODS: 1.5.2

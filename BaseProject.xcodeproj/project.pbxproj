@@ -16,6 +16,27 @@
 		845EE06120A4C09400D12F0B /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EE06020A4C09400D12F0B /* RoundedButton.swift */; };
 		845EE06520A4C98800D12F0B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 845EE06720A4C98800D12F0B /* Localizable.strings */; };
 		845EE06920A4CADE00D12F0B /* UIViewControllerAlertExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EE06820A4CADE00D12F0B /* UIViewControllerAlertExtensions.swift */; };
+		845EE06B20A4DE8900D12F0B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EE06A20A4DE8900D12F0B /* LoginViewController.swift */; };
+		845EE06D20A4E07300D12F0B /* LoginWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EE06C20A4E07300D12F0B /* LoginWebViewController.swift */; };
+		845EE06F20A507E000D12F0B /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EE06E20A507E000D12F0B /* UserService.swift */; };
+		846B45C020A6E96C00E14F3D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B45BF20A6E96C00E14F3D /* TabBarViewController.swift */; };
+		846B45C220A6E9AF00E14F3D /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B45C120A6E9AF00E14F3D /* LibraryViewController.swift */; };
+		846B45C420A6E9C400E14F3D /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B45C320A6E9C400E14F3D /* WishListViewController.swift */; };
+		846B45C620A6E9CF00E14F3D /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B45C520A6E9CF00E14F3D /* ChatViewController.swift */; };
+		846B45C820A6EDFA00E14F3D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B45C720A6EDFA00E14F3D /* Settings.swift */; };
+		846B45CA20A6F5D600E14F3D /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B45C920A6F5D600E14F3D /* Friend.swift */; };
+		846B45CC20A70D7400E14F3D /* FriendsListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B45CB20A70D7400E14F3D /* FriendsListSection.swift */; };
+		846B45CF20A70E4400E14F3D /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B45CD20A70E4400E14F3D /* FriendTableViewCell.swift */; };
+		846B45D020A70E4400E14F3D /* FriendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846B45CE20A70E4400E14F3D /* FriendTableViewCell.xib */; };
+		8485DE4E20A7117B0022C37A /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8485DE4420A711740022C37A /* Lato-LightItalic.ttf */; };
+		8485DE4F20A7117B0022C37A /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8485DE4520A711750022C37A /* Lato-Regular.ttf */; };
+		8485DE5020A7117B0022C37A /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8485DE4620A711760022C37A /* Lato-BlackItalic.ttf */; };
+		8485DE5120A7117B0022C37A /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8485DE4720A711760022C37A /* Lato-Black.ttf */; };
+		8485DE5220A7117B0022C37A /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8485DE4820A711770022C37A /* Lato-Hairline.ttf */; };
+		8485DE5320A7117B0022C37A /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8485DE4920A711770022C37A /* Lato-Italic.ttf */; };
+		8485DE5520A7117B0022C37A /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8485DE4B20A711780022C37A /* Lato-Bold.ttf */; };
+		8485DE5620A7117B0022C37A /* Lato-HairlineItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8485DE4C20A711790022C37A /* Lato-HairlineItalic.ttf */; };
+		8485DE5720A7117B0022C37A /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8485DE4D20A7117A0022C37A /* Lato-BoldItalic.ttf */; };
 		8486521B20A3AF2700645FD7 /* RESTClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8486521A20A3AF2700645FD7 /* RESTClient.swift */; };
 		8486521D20A3B68100645FD7 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8486521C20A3B68100645FD7 /* APIClient.swift */; };
 		8486521F20A3B7F400645FD7 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8486521E20A3B7F400645FD7 /* APIConstants.swift */; };
@@ -67,6 +88,27 @@
 		845EE06020A4C09400D12F0B /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		845EE06620A4C98800D12F0B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		845EE06820A4CADE00D12F0B /* UIViewControllerAlertExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerAlertExtensions.swift; sourceTree = "<group>"; };
+		845EE06A20A4DE8900D12F0B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		845EE06C20A4E07300D12F0B /* LoginWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWebViewController.swift; sourceTree = "<group>"; };
+		845EE06E20A507E000D12F0B /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		846B45BF20A6E96C00E14F3D /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		846B45C120A6E9AF00E14F3D /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		846B45C320A6E9C400E14F3D /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
+		846B45C520A6E9CF00E14F3D /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		846B45C720A6EDFA00E14F3D /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		846B45C920A6F5D600E14F3D /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		846B45CB20A70D7400E14F3D /* FriendsListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListSection.swift; sourceTree = "<group>"; };
+		846B45CD20A70E4400E14F3D /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
+		846B45CE20A70E4400E14F3D /* FriendTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendTableViewCell.xib; sourceTree = "<group>"; };
+		8485DE4420A711740022C37A /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
+		8485DE4520A711750022C37A /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		8485DE4620A711760022C37A /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
+		8485DE4720A711760022C37A /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
+		8485DE4820A711770022C37A /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hairline.ttf"; sourceTree = "<group>"; };
+		8485DE4920A711770022C37A /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
+		8485DE4B20A711780022C37A /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		8485DE4C20A711790022C37A /* Lato-HairlineItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-HairlineItalic.ttf"; sourceTree = "<group>"; };
+		8485DE4D20A7117A0022C37A /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
 		8486521A20A3AF2700645FD7 /* RESTClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTClient.swift; sourceTree = "<group>"; };
 		8486521C20A3B68100645FD7 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		8486521E20A3B7F400645FD7 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
@@ -163,14 +205,32 @@
 		845EE06220A4C56D00D12F0B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				846B45CB20A70D7400E14F3D /* FriendsListSection.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		8485DE4320A711650022C37A /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				8485DE4720A711760022C37A /* Lato-Black.ttf */,
+				8485DE4620A711760022C37A /* Lato-BlackItalic.ttf */,
+				8485DE4B20A711780022C37A /* Lato-Bold.ttf */,
+				8485DE4D20A7117A0022C37A /* Lato-BoldItalic.ttf */,
+				8485DE4820A711770022C37A /* Lato-Hairline.ttf */,
+				8485DE4C20A711790022C37A /* Lato-HairlineItalic.ttf */,
+				8485DE4920A711770022C37A /* Lato-Italic.ttf */,
+				8485DE4420A711740022C37A /* Lato-LightItalic.ttf */,
+				8485DE4520A711750022C37A /* Lato-Regular.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 		8486521120A3ADDB00645FD7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				8486522A20A3BBC700645FD7 /* User.swift */,
+				846B45C920A6F5D600E14F3D /* Friend.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -193,6 +253,7 @@
 				8486522420A3BB0400645FD7 /* ViewControllerExtensions.swift */,
 				8486522620A3BB4300645FD7 /* Macros.swift */,
 				8486522820A3BB7D00645FD7 /* FoundationUtils.swift */,
+				846B45C720A6EDFA00E14F3D /* Settings.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -200,6 +261,7 @@
 		8486521420A3AE1800645FD7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8485DE4320A711650022C37A /* Font */,
 				8486521920A3AE8500645FD7 /* Storyboards */,
 				84DED09020A3A88100F80B2A /* Assets.xcassets */,
 				845EE06720A4C98800D12F0B /* Localizable.strings */,
@@ -210,6 +272,12 @@
 		8486521520A3AE2A00645FD7 /* VCs */ = {
 			isa = PBXGroup;
 			children = (
+				845EE06A20A4DE8900D12F0B /* LoginViewController.swift */,
+				845EE06C20A4E07300D12F0B /* LoginWebViewController.swift */,
+				846B45BF20A6E96C00E14F3D /* TabBarViewController.swift */,
+				846B45C120A6E9AF00E14F3D /* LibraryViewController.swift */,
+				846B45C320A6E9C400E14F3D /* WishListViewController.swift */,
+				846B45C520A6E9CF00E14F3D /* ChatViewController.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -219,6 +287,8 @@
 			children = (
 				845EE05920A4BB9000D12F0B /* Reusable */,
 				845EE05620A4BA8400D12F0B /* AlertView */,
+				846B45CD20A70E4400E14F3D /* FriendTableViewCell.swift */,
+				846B45CE20A70E4400E14F3D /* FriendTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -228,6 +298,7 @@
 			children = (
 				845EE06220A4C56D00D12F0B /* Components */,
 				8486522C20A3BE7800645FD7 /* TableViewServices */,
+				845EE06E20A507E000D12F0B /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -426,10 +497,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				845EE06520A4C98800D12F0B /* Localizable.strings in Resources */,
+				8485DE5620A7117B0022C37A /* Lato-HairlineItalic.ttf in Resources */,
+				8485DE5720A7117B0022C37A /* Lato-BoldItalic.ttf in Resources */,
+				846B45D020A70E4400E14F3D /* FriendTableViewCell.xib in Resources */,
+				8485DE5220A7117B0022C37A /* Lato-Hairline.ttf in Resources */,
 				84DED09420A3A88100F80B2A /* LaunchScreen.storyboard in Resources */,
+				8485DE4F20A7117B0022C37A /* Lato-Regular.ttf in Resources */,
 				845EE05F20A4BEE600D12F0B /* PopupView.xib in Resources */,
+				8485DE5520A7117B0022C37A /* Lato-Bold.ttf in Resources */,
+				8485DE5020A7117B0022C37A /* Lato-BlackItalic.ttf in Resources */,
 				84DED09120A3A88100F80B2A /* Assets.xcassets in Resources */,
 				84DED08F20A3A88000F80B2A /* Main.storyboard in Resources */,
+				8485DE5120A7117B0022C37A /* Lato-Black.ttf in Resources */,
+				8485DE5320A7117B0022C37A /* Lato-Italic.ttf in Resources */,
+				8485DE4E20A7117B0022C37A /* Lato-LightItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,12 +558,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Locksmith/Locksmith.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Locksmith.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,26 +581,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				845EE05B20A4BC2800D12F0B /* XibView.swift in Sources */,
+				846B45C420A6E9C400E14F3D /* WishListViewController.swift in Sources */,
+				845EE06F20A507E000D12F0B /* UserService.swift in Sources */,
 				8486522720A3BB4300645FD7 /* Macros.swift in Sources */,
 				8486522E20A3BE9000645FD7 /* TableViewService.swift in Sources */,
+				845EE06B20A4DE8900D12F0B /* LoginViewController.swift in Sources */,
 				8486522520A3BB0400645FD7 /* ViewControllerExtensions.swift in Sources */,
 				845EE06120A4C09400D12F0B /* RoundedButton.swift in Sources */,
+				846B45C220A6E9AF00E14F3D /* LibraryViewController.swift in Sources */,
 				8486522120A3B90400645FD7 /* ViewConstants.swift in Sources */,
 				8486522320A3BA5600645FD7 /* UIExtensions.swift in Sources */,
 				84DED08C20A3A88000F80B2A /* ViewController.swift in Sources */,
+				846B45C020A6E96C00E14F3D /* TabBarViewController.swift in Sources */,
 				8486523420A3BF0C00645FD7 /* TableViewServiceSectionBuilder.swift in Sources */,
 				8486521F20A3B7F400645FD7 /* APIConstants.swift in Sources */,
+				846B45CF20A70E4400E14F3D /* FriendTableViewCell.swift in Sources */,
+				846B45CC20A70D7400E14F3D /* FriendsListSection.swift in Sources */,
 				8486521B20A3AF2700645FD7 /* RESTClient.swift in Sources */,
 				84DED08A20A3A88000F80B2A /* AppDelegate.swift in Sources */,
+				845EE06D20A4E07300D12F0B /* LoginWebViewController.swift in Sources */,
 				845EE05520A4B57300D12F0B /* Router.swift in Sources */,
 				845EE05820A4BA9A00D12F0B /* AlertView.swift in Sources */,
 				845EE05D20A4BD9500D12F0B /* PopupView.swift in Sources */,
 				8486522920A3BB7D00645FD7 /* FoundationUtils.swift in Sources */,
 				845EE05320A4B3E300D12F0B /* Routables.swift in Sources */,
 				845EE06920A4CADE00D12F0B /* UIViewControllerAlertExtensions.swift in Sources */,
+				846B45C820A6EDFA00E14F3D /* Settings.swift in Sources */,
 				8486523020A3BED100645FD7 /* TableViewServiceSection.swift in Sources */,
+				846B45CA20A6F5D600E14F3D /* Friend.swift in Sources */,
 				8486521D20A3B68100645FD7 /* APIClient.swift in Sources */,
 				8486523220A3BEEE00645FD7 /* TableViewSectionItem.swift in Sources */,
+				846B45C620A6E9CF00E14F3D /* ChatViewController.swift in Sources */,
 				8486522B20A3BBC700645FD7 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -632,7 +726,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -686,7 +780,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;

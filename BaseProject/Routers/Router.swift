@@ -10,23 +10,26 @@ import UIKit
 
 enum Action: RoutableAction
 {
-    case webview(title: String, url: URL)
+    case webview(delegate: LoginViewControllerDelegate)
+    case tabbarview()
     
     var vcIdentifier: String? {
         switch self {
-        case .webview(_): return "WebViewController"
+        case .webview(_): return "LoginWebViewController"
+        case .tabbarview(_): return "TabBarViewController"
         }
     }
     
     func configured() -> UIViewController? {
         guard let vc = self.vc else {return nil}
         switch self {
-//        case .webview(let title, let url):
-//            let vca = (vc as! WebViewController)
-//            vca.title = title
-//            vca.url = url
-//            return UINavigationController(rootViewController: vca)
-        
+        case .webview(let delegate):
+            let vca = (vc as! LoginWebViewController)
+            vca.delegate = delegate
+            return UINavigationController(rootViewController: vca)
+        case .tabbarview():
+            let vca = (vc as! TabBarViewController)
+            return UINavigationController(rootViewController: vca)
         default: break
         }
         return vc
@@ -35,6 +38,7 @@ enum Action: RoutableAction
     var presentationStyle: RoutablePresentationStyle {
         switch  self {
         case .webview(_): return .modal
+        case .tabbarview(): return .popover
         }
     }
 }

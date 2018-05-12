@@ -9,11 +9,9 @@
 import Foundation
 
 func DLog<T>(_ object: T, function: String = #function, line: Int = #line, file: String = #file) {
-    #if DEBUGBUILD && (ENV_STAGING || ENV_DEVELOPMENT)
     print("[\((file as NSString).lastPathComponent)] \(function) [Line \(line)]:")
     print("\(object)")
     print("")
-    #endif
 }
 
 func delay(_ delay:Double, closure:@escaping ()->())

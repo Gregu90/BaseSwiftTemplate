@@ -116,6 +116,7 @@ class RESTClient
             headers.update(authorizationHeaders)
         }
         
+        DLog("authorizationHeaders: \(header)")
         
         var encoding = encoding
         if encoding == nil {

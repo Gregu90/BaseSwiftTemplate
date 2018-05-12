@@ -9,6 +9,9 @@ target 'BaseProject' do
     pod 'ObjectMapper',
 :git => 'https://github.com/Hearst-DD/ObjectMapper.git',
 :branch => 'master'
+	pod 'Locksmith',
+:git => 'https://github.com/matthewpalmer/Locksmith.git',
+:branch => 'master'
     pod 'Kingfisher',
 :git => 'https://github.com/onevcat/Kingfisher.git',
 :branch => 'master'

@@ -26,14 +26,16 @@ struct APIConstants
     
     enum Paths: StringConvertible
     {
-        case cities
-
+        case token
+        case friends(userId: String)
         
         var string: String
         {
             switch self {
-            case .cities: return
-                "cities"
+            case .token: return
+                "token"
+            case .friends(let userId): return
+                "users/\(userId)/friends"
             
             }
         }
@@ -45,4 +47,12 @@ struct APIConstants
         case apiHash = "X-API-HASH"
     }
 
+    enum LoginConfig: String
+    {
+        case client_id = "51205051179528065"
+        case client_secret = "55de1a613d7e405578d4bd11fb58ff517ce03fb519373e3a04e3c3642c5487ff"
+        case redirect_url = "https://localhost/"
+
+    }
+    
 }
